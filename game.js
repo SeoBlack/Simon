@@ -52,6 +52,7 @@ function checkAnswer(currentLevel){
     }
 }
 $(".btn").click(function (e){
+    if(!gameStarted) return;
     let userChosenColor = e.target.getAttribute("id");
     playSound(userChosenColor);
     userClickedPattern.push(userChosenColor);
